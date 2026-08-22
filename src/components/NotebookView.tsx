@@ -29,7 +29,7 @@ export const NotebookView: React.FC = () => {
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'travel_reimbursement_agent.ipynb';
+    a.download = 'PadmalochanSahu.ipynb';
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
@@ -62,7 +62,7 @@ export const NotebookView: React.FC = () => {
             Runnable Jupyter Notebook &amp; Python Solution
           </h2>
           <p className="text-xs text-slate-400 mt-1 max-w-xl">
-            Single self-contained notebook (<code className="text-blue-300 font-mono">travel_reimbursement_agent.ipynb</code>) that runs top-to-bottom without manual intervention, outputting the Section 3 JSON array in the final cell.
+            Single self-contained notebook (<code className="text-blue-300 font-mono">PadmalochanSahu.ipynb</code>) that runs top-to-bottom without manual intervention, outputting the Section 3 JSON array in the final cell.
           </p>
         </div>
 
