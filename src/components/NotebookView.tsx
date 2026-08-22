@@ -11,7 +11,7 @@ import {
   Terminal,
   CheckCircle2
 } from 'lucide-react';
-import { PYTHON_NOTEBOOK_CODE } from '../../server/notebookGenerator';
+import { PYTHON_NOTEBOOK_CODE, generateJupyterNotebookJson } from '../../server/notebookGenerator';
 
 export const NotebookView: React.FC = () => {
   const [copiedCode, setCopiedCode] = useState(false);
@@ -23,20 +23,17 @@ export const NotebookView: React.FC = () => {
     setTimeout(() => setCopiedCode(false), 2000);
   };
 
-  const handleDownloadIpynb = async () => {
-    try {
-      const res = await fetch('/api/notebook-content');
-      const data = await res.json();
-      const blob = new Blob([data.notebook_json], { type: 'application/json' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'travel_reimbursement_agent.ipynb';
-      a.click();
-      URL.revokeObjectURL(url);
-    } catch (err) {
-      console.error('Failed to download ipynb', err);
-    }
+  const handleDownloadIpynb = () => {
+    const notebookJson = generateJupyterNotebookJson();
+    const blob = new Blob([notebookJson], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'travel_reimbursement_agent.ipynb';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
   };
 
   const handleDownloadPy = () => {
@@ -45,7 +42,9 @@ export const NotebookView: React.FC = () => {
     const a = document.createElement('a');
     a.href = url;
     a.download = 'travel_reimbursement_agent.py';
+    document.body.appendChild(a);
     a.click();
+    document.body.removeChild(a);
     URL.revokeObjectURL(url);
   };
 
@@ -70,21 +69,21 @@ export const NotebookView: React.FC = () => {
         <div className="flex flex-wrap items-center gap-2">
           <button
             onClick={handleDownloadIpynb}
-            className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold rounded-xl transition shadow-sm"
+            className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold rounded-xl transition shadow-sm cursor-pointer"
           >
             <Download className="w-4 h-4" />
             Download .ipynb
           </button>
           <button
             onClick={handleDownloadPy}
-            className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold rounded-xl border border-slate-700 transition"
+            className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold rounded-xl border border-slate-700 transition cursor-pointer"
           >
             <Download className="w-4 h-4" />
             Download .py
           </button>
           <button
             onClick={handleCopyPython}
-            className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold rounded-xl border border-slate-700 transition"
+            className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold rounded-xl border border-slate-700 transition cursor-pointer"
           >
             {copiedCode ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
             {copiedCode ? 'Copied' : 'Copy Code'}
