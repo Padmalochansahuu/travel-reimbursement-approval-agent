@@ -14,7 +14,7 @@ An agentic system that evaluates employee travel expense claims against corporat
 
 | File | Description |
 |---|---|
-| [travel_reimbursement_agent.ipynb](./travel_reimbursement_agent.ipynb) | Jupyter Notebook — run top-to-bottom, outputs Section 3 JSON |
+| [PadmalochanSahu.ipynb](./PadmalochanSahu.ipynb) | ⭐ Main submission notebook (`namesurname.ipynb`) — run top-to-bottom, outputs Section 3 JSON |
 | [travel_reimbursement_agent.py](./travel_reimbursement_agent.py) | Standalone Python script — same logic, no dependencies |
 
 > Or download directly from the live app → **Jupyter Notebook tab** → `Download .ipynb` / `Download .py`
@@ -27,9 +27,9 @@ An agentic system that evaluates employee travel expense claims against corporat
 
 **Option A — Jupyter Notebook:**
 ```bash
-jupyter lab travel_reimbursement_agent.ipynb
+jupyter lab PadmalochanSahu.ipynb
 ```
-Download [`travel_reimbursement_agent.ipynb`](./travel_reimbursement_agent.ipynb) → open in Jupyter Lab / VS Code → click **Restart Kernel & Run All Cells** → final cell prints the Section 3 JSON.
+Download [`PadmalochanSahu.ipynb`](./PadmalochanSahu.ipynb) → open in Jupyter Lab / VS Code → click **Restart Kernel & Run All Cells** → final cell prints the Section 3 JSON.
 
 **Option B — Python script (fastest, zero setup):**
 ```bash
@@ -93,7 +93,7 @@ npm start          # serve production
 ├── server/
 │   ├── agentEngine.ts     # Tool implementations & deterministic engine
 │   └── notebookGenerator.ts  # .ipynb / .py exporter
-├── travel_reimbursement_agent.ipynb
+├── PadmalochanSahu.ipynb          # ⭐ Main submission (namesurname.ipynb)
 ├── travel_reimbursement_agent.py
 └── index.html
 ```
