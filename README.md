@@ -25,17 +25,17 @@ An agentic system that evaluates employee travel expense claims against corporat
 
 > ✅ **No setup needed. No pip install. No API keys. Just Python 3.8+**
 
-**Option A — Python script (fastest, zero setup):**
-```bash
-python travel_reimbursement_agent.py
-```
-Download [`travel_reimbursement_agent.py`](./travel_reimbursement_agent.py) → run it → get the JSON output instantly.
-
-**Option B — Jupyter Notebook:**
+**Option A — Jupyter Notebook:**
 ```bash
 jupyter lab travel_reimbursement_agent.ipynb
 ```
 Download [`travel_reimbursement_agent.ipynb`](./travel_reimbursement_agent.ipynb) → open in Jupyter Lab / VS Code → click **Restart Kernel & Run All Cells** → final cell prints the Section 3 JSON.
+
+**Option B — Python script (fastest, zero setup):**
+```bash
+python travel_reimbursement_agent.py
+```
+Download [`travel_reimbursement_agent.py`](./travel_reimbursement_agent.py) → run it → get the JSON output instantly.
 
 Uses only Python standard library: `json`, `datetime`, `typing` — nothing to install.
 
