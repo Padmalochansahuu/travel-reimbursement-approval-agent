@@ -1,6 +1,0 @@
-{
-  "name": "Travel Reimbursement Approval Agent",
-  "description": "Agentic system with multi-tool calling and deterministic reasoning to evaluate employee travel reimbursement claims against policy, receipts, and approval rules.",
-  "requestFramePermissions": [],
-  "majorCapabilities": []
-}

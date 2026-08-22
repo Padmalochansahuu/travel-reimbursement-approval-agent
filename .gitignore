@@ -15,3 +15,10 @@ firebase-debug.*.log
 *.temp
 .vscode/
 .idea/
+.agents/
+.claude/
+skills-lock.json
+metadata.json
+bun.lock
+server.ts
+.github/
