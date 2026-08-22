@@ -54,10 +54,7 @@ export const Header: React.FC<HeaderProps> = ({
                 <h1 className="text-base sm:text-lg font-bold text-white tracking-tight">
                   Travel Reimbursement Approval Agent
                 </h1>
-                <span className="hidden sm:inline-flex items-center gap-1 text-[11px] font-medium bg-emerald-950 text-emerald-300 border border-emerald-800/80 px-2 py-0.5 rounded-full">
-                  <Sparkles className="w-3 h-3 text-emerald-400" />
-                  GenAI Agent Active
-                </span>
+
               </div>
               <p className="text-xs text-slate-400">
                 Policy Grounding (Appendix A) · Multi-Tool Calling · Structured Decisions
