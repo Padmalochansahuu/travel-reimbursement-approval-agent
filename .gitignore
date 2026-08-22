@@ -1,38 +1,17 @@
 node_modules/
+dist/
 build/
-dist/
 coverage/
-.DS_Store
-*.log
-.env*
-!.env.example
-
-# Dependencies
-node_modules/
-
-# Vite build output
-dist/
-
-# Firebase local/generated files
 .firebase/
 firebase-debug.log
 firebase-debug.*.log
-
-# Environment secrets
 .env
 .env.local
 .env.*.local
-
-# OS files
+!.env.example
 .DS_Store
-
-# IDE
-.vscode/
-.idea/
-
-# Logs
 *.log
-
-# Temporary files
 *.tmp
 *.temp
+.vscode/
+.idea/
