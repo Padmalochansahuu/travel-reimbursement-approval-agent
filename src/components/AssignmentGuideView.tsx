@@ -27,7 +27,7 @@ export const AssignmentGuideView: React.FC<AssignmentGuideViewProps> = ({ onNavi
         <div className="relative z-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-400/30 text-blue-300 text-xs font-semibold uppercase tracking-wider mb-3">
             <Award className="w-4 h-4 text-blue-400" />
-            HCLTech GenAI Developer Lead Role Assessment
+            Travel Reimbursement Approval Agent
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
             Travel Reimbursement Approval Agent
@@ -46,7 +46,7 @@ export const AssignmentGuideView: React.FC<AssignmentGuideViewProps> = ({ onNavi
           </div>
           <h3 className="text-sm font-bold text-white">Is an AI API Key Required?</h3>
           <p className="text-xs text-slate-400 leading-relaxed">
-            <strong>No API key required for evaluation.</strong> The system features a production-grade <em>Dual-Engine Architecture</em>: when an API key is present, Gemini drives tool calls; otherwise, the grounded deterministic engine executes with 100% precision.
+            <strong>No API key required for evaluation.</strong> The system features a production-grade <em>Dual-Engine Architecture</em>: the deterministic engine executes with 100% precision using grounded policy rules.
           </p>
         </div>
 
@@ -66,7 +66,7 @@ export const AssignmentGuideView: React.FC<AssignmentGuideViewProps> = ({ onNavi
           </div>
           <h3 className="text-sm font-bold text-white">Top-to-Bottom Execution</h3>
           <p className="text-xs text-slate-400 leading-relaxed">
-            The Jupyter Notebook (<code className="text-blue-300 font-mono text-[11px]">travel_reimbursement_agent.ipynb</code>) executes seamlessly in any Python 3.8+ environment or Google Colab without manual steps.
+            The Jupyter Notebook (<code className="text-blue-300 font-mono text-[11px]">travel_reimbursement_agent.ipynb</code>) executes seamlessly in any Python 3.8+ environment without manual steps.
           </p>
         </div>
       </div>
@@ -130,7 +130,7 @@ export const AssignmentGuideView: React.FC<AssignmentGuideViewProps> = ({ onNavi
             </h4>
             <ol className="list-decimal list-inside space-y-1.5 text-slate-400 pl-2">
               <li>Navigate to the <button onClick={() => onNavigateTab('notebook')} className="text-blue-400 underline font-semibold">Jupyter Notebook Tab</button> and click <strong>Download .ipynb</strong> or <strong>Download .py</strong>.</li>
-              <li>Open the notebook in Jupyter Lab, VS Code, or Google Colab.</li>
+              <li>Open the notebook in Jupyter Lab or VS Code.</li>
               <li>Click <em>"Restart Kernel &amp; Run All Cells"</em>.</li>
               <li>The final cell prints the exact Section 3 compliant JSON array for all 5 Appendix B benchmark claims.</li>
             </ol>

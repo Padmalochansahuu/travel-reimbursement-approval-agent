@@ -606,7 +606,7 @@ export function generateJupyterNotebookJson(): string {
           '- **Fast Local Execution vs. Cloud Overhead**: The agent is designed to run self-contained and fast without heavy database dependencies, satisfying the lightweight candidate prototype constraints.\n',
           '\n',
           '### 3. What to Improve Next\n',
-          '- **OCR Receipt Document Parsing**: Incorporate Vision / Multimodal Gemini to parse receipt photos directly for vendor, line items, and taxes.\n',
+          '- **OCR Receipt Document Parsing**: Incorporate Vision / Multimodal models to parse receipt photos directly for vendor, line items, and taxes.\n',
           '- **Currency Conversion Engine**: Add real-time FX rate tool for international expenses.\n',
           '- **Employee Historical Travel Profiling**: Detect repeat patterns and anomalous claiming behavior.\n'
         ]

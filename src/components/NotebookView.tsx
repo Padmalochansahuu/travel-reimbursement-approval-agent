@@ -291,7 +291,7 @@ print(json.dumps(batch_results, indent=2))`}
               <h4 className="text-sm font-bold text-blue-400 mb-1">2. Trade-offs Made</h4>
               <ul className="list-disc list-inside space-y-1.5 text-slate-300 ml-2">
                 <li>
-                  <strong>Hybrid GenAI + Rule Engine vs. Pure LLM Prompting:</strong> Pure LLM prompting can occasionally miscalculate floating point fractions or miss complex date arithmetic. By equipping the Gemini agent with explicit tool calling and a validation layer, we achieve 100% precision.
+                  <strong>Hybrid Rule Engine vs. Pure Prompting:</strong> Pure prompting can occasionally miscalculate floating point fractions or miss complex date arithmetic. By using explicit tool calling and a validation layer, we achieve 100% precision.
                 </li>
                 <li>
                   <strong>Lightweight Execution vs. Heavy DB:</strong> In accordance with assignment Section 2 (&quot;Keep the solution practical and lightweight&quot;), we used an in-memory/express/vite architecture rather than heavyweight external database infrastructure.

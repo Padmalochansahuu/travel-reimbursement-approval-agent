@@ -433,7 +433,7 @@ export function toolValidateStructuredOutput(args: {
 }
 
 // -------------------------------------------------------------
-// 2. GEMINI SDK FUNCTION DECLARATIONS
+// 2. AGENT TOOL DECLARATIONS
 // -------------------------------------------------------------
 
 const lookupPolicyDeclaration: FunctionDeclaration = {
@@ -763,7 +763,7 @@ export function evaluateClaimDeterministically(claim: ReimbursementClaim): Struc
 }
 
 // -------------------------------------------------------------
-// 4. GEMINI GENAI AGENT RUNNER WITH MULTI-TOOL CALLING & RESILIENT FALLBACK
+// 4. AGENT RUNNER WITH MULTI-TOOL CALLING & RESILIENT FALLBACK
 // -------------------------------------------------------------
 
 async function tryGenerateWithModel(
@@ -817,14 +817,7 @@ export async function evaluateClaimWithAgent(claim: ReimbursementClaim): Promise
   }
 
   try {
-    const ai = new GoogleGenAI({
-      apiKey,
-      httpOptions: {
-        headers: {
-          'User-Agent': 'aistudio-build'
-        }
-      }
-    });
+    const ai = new GoogleGenAI({ apiKey });
 
     const systemInstruction = `
 You are the Travel Reimbursement Approval Agent for an enterprise financial audit system.
