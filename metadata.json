@@ -1,0 +1,6 @@
+{
+  "name": "Travel Reimbursement Approval Agent",
+  "description": "GenAI-assisted agent with multi-tool calling and reasoning to evaluate employee travel reimbursement claims against policy, receipts, and approval rules.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
